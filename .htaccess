@@ -1,0 +1,26 @@
+RewriteEngine On
+
+#Gestion de l'accueil de la plateforme
+
+#RewriteRule ^login[0-9]{3}[a-z]{2}./isi[a-z]{1,3}$ login.php
+RewriteRule ^.{0}$ index.php
+RewriteRule ^login$ login.php
+RewriteRule ^accueil$ accueil.php
+
+#Gestion des views
+
+RewriteRule ^facture$ view/facture/liste.php
+RewriteRule ^compteur$ view/compteur/liste.php
+RewriteRule ^paiement$ view/paiement/liste.php
+RewriteRule ^ajax-compteur$ view/compteur/ajax_compteur.php
+RewriteRule ^ajax-facture$ view/facture/ajax-facture.php
+RewriteRule ^angular$ view/compteur/angular.php
+RewriteRule ^test$ view/compteur/testBackEnd.php
+
+#Gestion des controllers
+
+RewriteRule ^factureController$ controller/factureController.php
+RewriteRule ^compteurController$ controller/compteurController.php
+RewriteRule ^paiementController$ controller/paiementController.php
+RewriteRule ^loginController$ controller/loginController.php
+RewriteRule ^angularController$ controller/angularController.php
